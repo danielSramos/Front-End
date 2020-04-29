@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Dashboard</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/mladenplavsic/bootstrap-navbar-sidebar/3bd282bd/docs/navbar-fixed-left.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body class="p-0">
+    <header>
+        <div class="container-fluid m-0 p-0">
+            <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary d-flex flex-row">
+            <a class="navbar-brand" href="#">
+                <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="logo-site">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Configurações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sair</a>
+                </li>
+              </ul>
+            </div>  
+        </nav>
+    </div>
+    </header>
+    <main>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+              </ol>
+        </nav>
+            <!-- dashboard -->
+        <div class="container-fluid">
+            <div class="row d-flex">
+                <!--<div class="col-sm-12 col-lg-5 bd-highlight flex-shrink-1 mr-auto">
+                    <canvas name="line-chart"></canvas>
+                </div>-->
+
+                <!--<div class="col-sm-12 col-md-12 col-lg-3 d-flex flex-wrap justify-content-center p-0">
+                    <div class="col-12 d-flex p-0 justify-content-md-center">
+                        <div class="col-4 col-md-3 col-lg-4 bg-dark p-0 m-0">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-info">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-warning">
+                            
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex p-0 justify-content-md-center">
+                        <div class="col-4 col-md-3 col-lg-4 bg-info">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-warning">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-dark">
+                            
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex p-0 justify-content-md-center">
+                        <div class="col-4 col-md-3 col-lg-4 bg-dark">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-info">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-warning">
+                            
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="col-sm-12 col-lg-4 d-flex">                
+                    <div id="pizzaGraph" style="width: 500px; height: 300px;"></div>
+                </div>
+                <div class="col-sm-12 col-lg-4  ">
+                    <div id="pizza3d" style="width: 500px; height: 300px;"></div>
+                </div>
+
+                <div class="col-sm-12 col-lg-4 ml-auto d-flex flex-wrap justify-content-center">
+                    <div class="d-flex flex-row justify-content-md-center mx-auto">
+                        <div class="col col-md-6 col-lg-6 box-info text-center" id="ext">
+                            <span>Cam01</span>
+                            <img class="" src="assets/img/128.png" alt="cam01">
+                        </div>
+                        <div class="col col-md-6 col-lg-6 box-info text-center" id="ext">
+                            <span>Cam02</span>
+                            <img class="" src="assets/img/128.png" alt="cam01">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-md-center mx-auto">
+                        <div class="col col-md-6 col-lg-6 box-info text-center" id="ext">
+                            <span>Cam03</span>
+                            <img class="" src="assets/img/128.png" alt="cam01">
+                        </div>
+                        <div class="col col-md-6 col-lg-6 box-info text-center" id="ext">
+                            <span>Cam04</span>
+                            <img class="" src="assets/img/128.png" alt="cam01">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex  bd-highlight justify-content-center">
+                <div class="col-sm-12 col-lg-8 d-flex">                
+                    <div id="chart_div" style="width: 900px; height: 300px;"></div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 d-flex flex-wrap p-2 justify-content-center p-0">
+                    <div class="col-12 d-flex p-0 justify-content-md-center">
+                        <div class="col-4 col-md-3 col-lg-4 bg-dark p-0 m-0">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-info">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-warning">
+                            
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex p-0 justify-content-md-center">
+                        <div class="col-4 col-md-3 col-lg-4 bg-info">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-warning">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-dark">
+                            
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex p-0 justify-content-md-center">
+                        <div class="col-4 col-md-3 col-lg-4 bg-dark">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-info">
+                            
+                        </div>
+                        <div class="col-4 col-md-3 col-lg-4 bg-warning">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<!-- Charts.js -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="assets/js/graph.js"></script>
+<!-- scripts - bootstrap 4 -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
