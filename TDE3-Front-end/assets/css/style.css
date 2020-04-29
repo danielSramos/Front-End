@@ -1,0 +1,20 @@
+body {
+    background-color: rbga(222, 222,222,1);
+}
+
+.bg-red {background-color: red;}
+.bg-blue {background-color: blue;}
+.bg-gray {background-color: gray;}
+
+.box-info {height: 150px;background-color: rgb(230, 230, 230);margin: 2px;}
+.box-info:hover {background-color: rgb(200, 200, 200); transition: background-color 0.3s;}
+.box-info-title {font-size: 12px;}
+.box-info-content {padding: 10px 30px;font-size: 18px;}
+.width-full {width: 100%;}
+
+.cameras {
+    height: 1600px;
+    width: 160px;
+    background-color: aqua;
+    color: black;
+}
